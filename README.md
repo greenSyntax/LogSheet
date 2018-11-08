@@ -5,11 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/LogSheet.svg?style=flat)](https://cocoapods.org/pods/LogSheet)
 [![Platform](https://img.shields.io/cocoapods/p/LogSheet.svg?style=flat)](https://cocoapods.org/pods/LogSheet)
 
-## Example
+## Features
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+This is my agenda for this repository, 
 
-## Requirements
+- [*] Maintain a CSV File which maintain your logs
+- [ ] Export CSV File using UIActivityViewController
+- [ ] UI ListView which shows all logs with a detail view.
+- [ ] Filter Button where, you can filter logs on LogType.
+- [ ] Update/Delete Option 
+
 
 ## Installation
 
@@ -20,9 +25,59 @@ it, simply add the following line to your Podfile:
 pod 'LogSheet'
 ```
 
+## Usage
+
+0. **Initialize**
+
+```swift
+import LogSheet
+```
+
+Then, you need a LogSheet object for futher actions,
+```swift
+let logSheet = LogSheet.instance
+```
+
+1. **Create Log**
+
+At any point, you want to create a log then call write(_:) method which expects LogModel() Object. 
+
+```swift
+
+// Structure Your Log Model
+let model = LogModel(identifer: 123, name: "New Error ", description: "This is my Error. I should write a detailed explanation", tags: [.buisnessError], type: .verbose, createTimestamp: Date(), updateTimestamp: Date())
+
+// Call Write method to persist
+if logSheet.write(log: model) {
+    print("Successfully Written")
+}
+else {
+    print("Failed on Write Operation")
+}
+
+```
+
+2. **Read Log**
+
+There is a read method which expect LogID if you want to get that particlaur log. Else, You have to pass nil in the parameter.
+
+```swift
+
+// All Logs
+if let data = logSheet.read(nil) {
+    print(data.description)
+}
+
+// Any Particular Log
+if let data = logSheet.read(123) {
+    print(data.description)
+}
+
+```
+
 ## Author
 
-b0ttleneck, abhishekravi.ct@oyorooms.com
+Abhishek Kumar Ravi, ab.abhishek.ravi@gmail.com
 
 ## License
 

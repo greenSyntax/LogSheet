@@ -9,7 +9,7 @@
 
 This is my agenda for this repository, 
 
-- [*] Maintain a CSV File which maintain your logs
+- [x] Maintain a CSV File which maintain your logs
 - [ ] Export CSV File using UIActivityViewController
 - [ ] UI ListView which shows all logs with a detail view.
 - [ ] Filter Button where, you can filter logs on LogType.
@@ -52,7 +52,7 @@ if logSheet.write(log: model) {
     print("Successfully Written")
 }
 else {
-    print("Failed on Write Operation")
+    print("Failed while writing")
 }
 
 ```
@@ -65,7 +65,7 @@ There is a read method which expect LogID if you want to get that particlaur log
 
 // All Logs
 if let data = logSheet.read(nil) {
-    print(data.description)
+print("Logs Count: \(data.cout)")
 }
 
 // Any Particular Log

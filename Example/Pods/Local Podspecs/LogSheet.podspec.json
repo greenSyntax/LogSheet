@@ -1,0 +1,22 @@
+{
+  "name": "LogSheet",
+  "version": "1.0.1",
+  "summary": "Preetiest way to log your log",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/b0ttleneck/LogSheet",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "b0ttleneck": "abhishekravi.ct@oyorooms.com"
+  },
+  "source": {
+    "git": "https://github.com/b0ttleneck/LogSheet.git",
+    "tag": "1.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LogSheet/Classes/**/*"
+}

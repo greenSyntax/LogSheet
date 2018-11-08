@@ -1,0 +1,6 @@
+framework module Pods_LogSheet_Example {
+  umbrella header "Pods-LogSheet_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LogSheet_Example' do
+  pod 'LogSheet', :path => '../'
+
+  target 'LogSheet_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
